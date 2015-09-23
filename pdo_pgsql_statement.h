@@ -21,7 +21,7 @@ namespace HPHP {
     public:
         DECLARE_RESOURCE_ALLOCATION(PDOPgSqlStatement);
 
-        PDOPgSqlStatement(PDOPgSqlResource* conn, PQ::Connection* server);
+        PDOPgSqlStatement(req::ptr<PDOPgSqlResource> conn, PQ::Connection* server);
         virtual ~PDOPgSqlStatement();
 
         bool create(const String& sql, const Array &options);
